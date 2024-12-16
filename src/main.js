@@ -1,5 +1,14 @@
-import { createApp } from 'vue'
-import './input.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router'; // Zorg dat je de router correct importeert
+import './input.css'; // Importeer Tailwind CSS of je globale stijlen
 
-createApp(App).mount('#app')
+// Maak de Vue-app aan
+const app = createApp(App);
+
+// Voeg de router toe
+app.use(router);
+
+// Mount de app
+app.mount('#app');
+
