@@ -1,20 +1,20 @@
 
 <script setup>
-import CustomButton from '../components/CustomButton.vue';
-import Navigation from '../components/Navigation.vue';
+  import AllNavigation from '../components/AllNavigation.vue';
+  import PersonalNavigation from '../components/PersonalNavigation.vue';
+  import Choose from '../components/Choose.vue';
+  import Header from '../components/Header.vue';
 </script>
 
 <template>
   <div class="w-screen h-screen bg-gray-100 flex flex-col">
     <!-- Header -->
-    <header class="w-full bg-white p-4 shadow-md flex justify-center">
-      <h1 class="text-blue-600 font-bold text-2xl">Intfind</h1>
-    </header>
+    <Header></Header>
 
     <!-- Scrollable Section -->
     <section class="flex-grow flex items-center justify-center overflow-y-auto p-4">
       <div class="h-auto flex items-center justify-center flex-col gap-4 border-2 border-gray-300 rounded w-80 p-4">
-        <Navigation></Navigation>
+        <PersonalNavigation />
 
         <!-- Image Section -->
         <div class="relative flex flex-col items-center">
@@ -24,19 +24,11 @@ import Navigation from '../components/Navigation.vue';
         </div>
 
         <!-- Buttons Section -->
-        <div class="flex space-x-6 mb-8">
-          <CustomButton icon="❌" color="bg-red-500" />
-          <CustomButton icon="🤖" color="bg-yellow-500" />
-          <CustomButton icon="✅" color="bg-green-500" />
-        </div>
+       <Choose></Choose>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="w-full bg-white p-4 shadow-md flex justify-around">
-      <CustomButton icon="💬"></CustomButton>
-      <CustomButton icon="🏠"></CustomButton>
-      <CustomButton icon="⚙️"></CustomButton>
-    </footer>
+    <allNavigation />
   </div>
 </template>
