@@ -1,3 +1,12 @@
+
+<script setup>
+import CustomButton from '../components/CustomButton.vue';
+import Navigation from '../components/Navigation.vue';
+</script>
+
+
+
+
 <template>
   <div class="w-screen h-screen bg-gray-100 flex flex-col items-center justify-between">
     <!-- Header -->
@@ -5,14 +14,8 @@
       <h1 class="text-blue-600 font-bold text-2xl">Intfind</h1>
     </header>
 
-    <section class="w-1/2 flex items-center justify-center flex-col gap-4 border-2 border-gray-300 rounded w-80">
-      <nav class="flex space-x-4 mt-4">
-        <!-- Navigatie knoppen -->
-        <RouterLink to="/" class="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center text-sm">Home</RouterLink>
-        <RouterLink to="/skills" class="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center text-sm">Skills</RouterLink>
-        <RouterLink to="/school" class="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center text-sm">School</RouterLink>
-        <RouterLink to="/about" class="bg-gray-200 rounded-full w-16 h-16 flex items-center justify-center text-sm">About</RouterLink>
-      </nav>
+    <section class="h-[60%] flex items-center justify-center flex-col gap-4 border-2 border-gray-300 rounded w-80">
+     <Navigation></Navigation>
 
       <!-- Image Section -->
       <div class="relative flex flex-col items-left">
@@ -25,7 +28,10 @@
       <div class="flex space-x-6 mb-8">
         <CustomButton icon="❌" color="bg-red-500" />
         <CustomButton icon="🤖" color="bg-yellow-500" />
-        <CustomButton icon="✅" color="bg-green-500" />
+        <form action="../index.php" method="post">
+<input type="submit" value="hoi">       
+      </form>
+      <CustomButton icon="✅" color="bg-green-500" />
       </div>
     </section>
 
@@ -37,7 +43,3 @@
     </footer>
   </div>
 </template>
-
-<script setup>
-import CustomButton from '../components/CustomButton.vue';
-</script>
