@@ -8,3 +8,4 @@ import AllNavigation from '../components/AllNavigation.vue';
   <Header />
   <AllNavigation />
 </template>
+
